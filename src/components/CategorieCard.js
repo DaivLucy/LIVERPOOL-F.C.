@@ -32,11 +32,11 @@ const CategorieCard = (props) => {
         <Button variant="outlined">
           <Link className="link" to="/items" state={{ filter: name }}>
             {' '}
-            See items
+            查看商品
           </Link>
         </Button>
         <Button variant="outlined" color="error" onClick={() => dispatch(deleteCategorie(id))}>
-          delete
+          删除
         </Button>
       </CardActions>
     </Card>

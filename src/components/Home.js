@@ -7,9 +7,11 @@ const Home = () => {
   const categories = useSelector((state) => state.categories);
 
   return (
+    // 渲染组件数据
     <div className="cards-container">
       {categories !== undefined ? categories.map((categorie) => (
         <div key={uuidv4()} className="card">
+          {/* 商品分类 */}
           <CategorieCard name={categorie.name} image={categorie.image} id={categorie.id} />
         </div>
       )) : false }

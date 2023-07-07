@@ -37,7 +37,7 @@ const DesktopBar = (props) => {
         <Paper onClick={createNotification('info')}>
           <InputBase
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Search Item"
+            placeholder="搜索商品"
             inputProps={{ 'aria-label': 'search item' }}
           />
           <IconButton

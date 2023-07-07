@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteFromCart } from '../redux/ecommerce/ecommerce';
 
-/* eslint-disable react/jsx-props-no-spreading */
+// 用forwardRef包装一个Slide组件
 const Transition = forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
 Transition.displayName = 'Transition';
 
@@ -22,9 +22,9 @@ const Cart = (props) => {
   const [open, setOpen] = useState(false);
   const [total, setTotal] = useState(0);
 
+  // 商品删除操作
   const dispatch = useDispatch();
 
-  // Behavior functions
   useEffect(() => {
     let a = 0;
     items.forEach((element) => {
@@ -63,19 +63,20 @@ const Cart = (props) => {
               <CloseIcon />
             </IconButton>
             <Typography sx={{ ml: 2, flex: 1 }} variant="h5" component="h1">
-              Shopping cart
+              购物车
             </Typography>
             <Fab variant="extended" color="success">
               <ShopIcon sx={{ mr: 1 }} />
-              Complete Buy
+              领劵结算
             </Fab>
             <Typography sx={{ ml: 2, flex: 1 }} variant="h5" component="h1">
-              Total: US$
+              合计: 
               {' '}
               {total}
+              元￥
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
-              Continue Shopping
+              继续购物
             </Button>
           </Toolbar>
         </AppBar>
@@ -85,7 +86,7 @@ const Cart = (props) => {
               <ListItemText primary={item.title} secondary={item.price} />
               <Fab variant="extended" sx={{ mr: 10 }} color="error" onClick={() => dispatch(deleteFromCart(item.id))}>
                 <DeleteForeverIcon />
-                Delete Item
+                移除该商品
               </Fab>
               <ListItemAvatar>
                 <Avatar

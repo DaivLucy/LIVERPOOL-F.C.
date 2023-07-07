@@ -1,3 +1,5 @@
+// 移动端的搜索框
+
 import { IconButton, InputBase, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { PropTypes } from 'prop-types';
@@ -18,7 +20,7 @@ const MobileBar = (props) => {
       <Paper>
         <InputBase
           sx={{ ml: 1, flex: 1 }}
-          placeholder="Search Item"
+          placeholder="搜索内容"
           inputProps={{ 'aria-label': 'search item' }}
         />
         <IconButton type="button" sx={{ p: '10px' }} aria-label="search">

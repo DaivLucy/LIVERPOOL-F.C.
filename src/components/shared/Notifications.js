@@ -3,10 +3,10 @@ import { NotificationManager } from 'react-notifications';
 const createNotification = (type) => () => {
   switch (type) {
     case 'info':
-      NotificationManager.info('Demo version, working on this feature...');
+      NotificationManager.info('前面的区域还没开发，以后再探索吧');
       break;
     case 'success':
-      NotificationManager.success('Success message', 'Title here');
+      NotificationManager.success('成功', '标题在这');
       break;
     case 'warning':
       NotificationManager.warning(

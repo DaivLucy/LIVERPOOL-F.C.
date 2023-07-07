@@ -21,23 +21,23 @@ const NavBar = () => {
                 disabled
               >
                 <MenuIcon />
-                All
+                全部
               </Button>
               <Button
                 variant="outlined"
                 onClick={createNotification('info')}
                 disabled
               >
-                Today&apos;s Deals
+                每日商品
               </Button>
               <Button variant="outlined">
                 <Link to="customer_service/" className="link">
-                  Customer Service
+                  客服服务
                 </Link>
               </Button>
               <Button variant="outlined">
                 <Link to="Register" className="link">
-                  Registry
+                  注册
                 </Link>
               </Button>
               <Button
@@ -45,11 +45,11 @@ const NavBar = () => {
                 onClick={createNotification('info')}
                 disabled
               >
-                Gift cards
+                支付方式
               </Button>
               <Button variant="outlined">
                 <Link to="sell" className="link">
-                  Create new
+                  添加商品
                 </Link>
               </Button>
             </Stack>

@@ -31,7 +31,7 @@ const Items = () => {
     <div className="cards-container outside">
       <Box sx={{ minWidth: 120 }} className="filter-bar">
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+          <InputLabel id="demo-simple-select-label">分类</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
@@ -39,12 +39,12 @@ const Items = () => {
             label="OrderBy"
             onChange={handleChange}
           >
-            <MenuItem value={ALL}>All items</MenuItem>
-            <MenuItem value={CLOTHES}>Clothes</MenuItem>
-            <MenuItem value={ELECTRONICS}>Electronics</MenuItem>
-            <MenuItem value={FURNITURE}>Furniture</MenuItem>
-            <MenuItem value={SHOES}>Shoes</MenuItem>
-            <MenuItem value={OTHERS}>Others</MenuItem>
+            <MenuItem value={ALL}>全部商品</MenuItem>
+            <MenuItem value={CLOTHES}>衣服</MenuItem>
+            <MenuItem value={ELECTRONICS}>电子产品</MenuItem>
+            <MenuItem value={FURNITURE}>家具</MenuItem>
+            <MenuItem value={SHOES}>鞋子</MenuItem>
+            <MenuItem value={OTHERS}>其他</MenuItem>
           </Select>
         </FormControl>
       </Box>

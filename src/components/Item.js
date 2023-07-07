@@ -29,7 +29,7 @@ const Item = (props) => {
           {title}
         </Typography>
         <Typography sx={{ mt: 1.5 }} color="text.secondary">
-          US$
+          ￥
           {price}
         </Typography>
       </CardContent>
@@ -40,10 +40,10 @@ const Item = (props) => {
           color="secondary"
           onClick={() => dispatch(addToCart(props))}
         >
-          Add to cart
+          添加至购物车
         </Button>
         <Button variant="outlined" color="error" onClick={() => dispatch(deleteItem(id))}>
-          Delete
+          删除
         </Button>
       </CardActions>
     </Card>

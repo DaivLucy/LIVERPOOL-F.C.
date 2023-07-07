@@ -1,3 +1,5 @@
+// 测试组件APP
+
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -16,6 +18,7 @@ describe('App integration test', () => {
     );
   });
 
+  // 判断路径是否有/
   test('it renders on / root page', () => {
     expect(window.location.pathname).toBe('/');
   });

@@ -21,7 +21,6 @@ const StyledMenu = styled((props) => (
       vertical: 'top',
       horizontal: 'right',
     }}
-    /* eslint-disable react/jsx-props-no-spreading */
     {...props}
   />
 ))(({ theme }) => ({
@@ -76,7 +75,7 @@ export default function HamburguerMenu() {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >
-        Options
+        选项
       </Button>
       <StyledMenu
         id="demo-customized-menu"
@@ -89,20 +88,20 @@ export default function HamburguerMenu() {
       >
         <MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
-          Edit
+          编辑
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <FileCopyIcon />
-          Duplicate
+          复制
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
           <ArchiveIcon />
-          Archive
+          文档
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <MoreHorizIcon />
-          More
+          更多
         </MenuItem>
       </StyledMenu>
     </div>

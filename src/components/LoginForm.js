@@ -1,3 +1,5 @@
+// 用户登录
+
 import '../style/Login.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -20,27 +22,27 @@ const LoginForm = () => {
           autoComplete="off"
         >
           <Typography textAlign="center" variant="h4" gutterBottom>
-            Login
+            登录
           </Typography>
           <div>
             <TextField
-              Email
-              label="Email"
+              userword
+              label="账户"
             />
           </div>
           <div>
             <TextField
               Password
-              label="Password"
+              label="密码"
             />
           </div>
-          <div className="login"><Button variant="outlined">Login</Button></div>
-          <div className="login"><Button variant="outlined">Forgot Password</Button></div>
+          <div className="login"><Button variant="outlined">登录</Button></div>
+          <div className="login"><Button variant="outlined">忘记密码</Button></div>
           <div className="login">
             <Typography textAlign="center" variant="subtitle1" gutterBottom>
-              Not have an Account?
+              还没注册账户？
               {' '}
-              <Link to="/register" className="link">Sign Up here  </Link>
+              <Link to="/register" className="link">现在注册 </Link>
             </Typography>
           </div>
         </Box>

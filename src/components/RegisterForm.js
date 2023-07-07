@@ -1,3 +1,5 @@
+// 注册
+
 import React from 'react';
 import Box from '@mui/material/Box';
 import { TextField, Typography } from '@mui/material';
@@ -17,52 +19,52 @@ function RegisterForm() {
         autoComplete="off"
       >
         <Typography textAlign="center" variant="h4" gutterBottom>
-          Sign Up
+          注册
         </Typography>
         <Typography textAlign="center" variant="subtitle1" gutterBottom>
-          It&apos;s free and only takes a minute
+          免费注册
         </Typography>
         <div>
           <TextField
             First
             Name
-            label="First Name"
+            label="姓"
           />
         </div>
         <div>
           <TextField
             Last
             Name
-            label="Last Name"
+            label="名"
           />
         </div>
         <div>
           <TextField
             Email
-            label="Email"
+            label="邮箱"
           />
         </div>
         <div>
           <TextField
             Password
-            label="Password"
+            label="密码"
           />
         </div>
         <div>
           <TextField
             Confirm
             Password
-            label="Confirm Password"
+            label="确认密码"
           />
         </div>
         <Link to="/e-commerce/" className="link">
-          <div className="login"><Button variant="outlined">Register</Button></div>
+          <div className="login"><Button variant="outlined">注册</Button></div>
         </Link>
         <div className="login">
           <Typography textAlign="center" variant="subtitle1" gutterBottom>
-            Already have an Account?
+            已经注册了？
             {' '}
-            <Link to="/login" className="link">Login here  </Link>
+            <Link to="/login" className="link">点击登录  </Link>
           </Typography>
         </div>
       </Box>

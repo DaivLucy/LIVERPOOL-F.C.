@@ -1,5 +1,7 @@
+// 操作item
+
 import axios from 'axios';
-// Actions
+
 const CATEGORIES_FETCHED = 'my-app/ecommerce/categorie/index';
 const CATEGORY_DELETED = 'my-app/ecommerce/categorie/delete';
 const CATEGORY_CREATED = 'my-app/ecommerce/categorie/create';
@@ -9,7 +11,7 @@ const PRODUCT_CREATED = 'my-app/ecommerce/product/create';
 const CART_ADDED_ITEM = 'my-app/ecommerce/cart/add';
 const CART_DELETED_ITEM = 'my-app/ecommerce/cart/delete';
 
-// Reducer
+
 const reducer = (
   state = { cart: [], categories: [], products: [] },
   action = {},
@@ -58,7 +60,7 @@ const reducer = (
   }
 };
 
-// Action Creators
+// 动作创建
 export const loadCategories = (categories) => ({
   type: CATEGORIES_FETCHED,
   payload: categories,
@@ -72,7 +74,7 @@ export const deleteFromCart = (id) => ({
   type: CART_DELETED_ITEM,
   payload: id,
 });
-// DELETE
+// 删除
 export const removeCategorie = (id) => ({
   type: CATEGORY_DELETED,
   payload: id,
@@ -82,7 +84,7 @@ export const removeItem = (id) => ({
   type: PRODUCT_DELETED,
   payload: id,
 });
-// CREATE
+// 创建
 export const addCategorie = (categorie) => ({
   type: CATEGORY_CREATED,
   payload: categorie,
@@ -93,7 +95,7 @@ export const addProduct = (product) => ({
   payload: product,
 });
 
-// Thunks
+// 异步操作  获取API接口
 export const fetchInitialData = () => async (dispatch) => {
   const categoriesResponse = await axios.get(
     'https://api.escuelajs.co/api/v1/categories',
